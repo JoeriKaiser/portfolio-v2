@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --ext .ts,.astro,.tsx src",
+    "lint": "eslint --ext .astro,.tsx",
+    "fix": "eslint fix",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },

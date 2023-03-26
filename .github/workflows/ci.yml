@@ -9,7 +9,7 @@ on:
     branches:
       - main
       - dev
-q
+
 jobs:
   test-front:
     runs-on: ubuntu-latest
@@ -17,7 +17,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        - uses: pnpm/action-setup@v2
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 7.21.0
           run_install: |
@@ -26,7 +28,7 @@ jobs:
             - args: [--global, prettier, typescript]
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - name: Lint
         run: pnpm lint

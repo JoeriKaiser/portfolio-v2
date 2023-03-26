@@ -9,7 +9,7 @@ on:
     branches:
       - main
       - dev
-q
+      
 jobs:
   test-front:
     runs-on: ubuntu-latest

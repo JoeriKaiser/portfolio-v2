@@ -28,7 +28,7 @@ jobs:
             - args: [--global, prettier, typescript]
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - name: Lint
         run: pnpm lint

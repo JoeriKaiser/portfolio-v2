@@ -3,7 +3,14 @@ module.exports = {
   overrides: [
     {
       // Define the configuration for `.astro` file.
-      files: ["*.astro"],
+      files: [
+        "*.astro",
+        "*.ts",
+        "**/*.astro/*.js",
+        "*.astro/*.js",
+        "**/*.spec.ts",
+        "**/*.*.ts",
+      ],
       // Enable this plugin
       plugins: ["astro"],
       env: {
@@ -18,7 +25,7 @@ module.exports = {
       // It's the setting you need when using TypeScript.
       parserOptions: {
         parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
+        extraFileExtensions: [".astro", ".spec.ts", ".spec", ".ts", ".d.ts"],
         // The script of Astro components uses ESM.
         sourceType: "module",
       },
@@ -34,7 +41,7 @@ module.exports = {
     {
       // Define the configuration for `<script>` tag.
       // Script in `<script>` is assigned a virtual file name with the `.js` extension.
-      files: ["**/*.astro/*.js", "*.astro/*.js"],
+      files: ["**/*.astro/*.js", "*.astro/*.js", "**/*.spec.ts", "**/*.*.ts"],
       env: {
         browser: true,
         es2020: true,

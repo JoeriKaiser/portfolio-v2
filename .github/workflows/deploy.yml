@@ -10,10 +10,19 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
-      - name: Clone repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: install dependencies
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.21.0
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+            - args: [--global, prettier, typescript]
+
+      - name: Install dependencies
         run: pnpm install
 
       - name: Build step

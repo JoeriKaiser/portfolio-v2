@@ -6,20 +6,23 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint --ext .astro,.tsx",
     "fix": "eslint fix",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs"
   },
   "dependencies": {
+    "@astrojs/deno": "^4.1.0",
+    "@astrojs/node": "^5.1.0",
     "@astrojs/react": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
     "@astrojs/vercel": "^3.2.1",
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
     "astro": "^2.1.7",
+    "nanostores": "^0.7.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.7"

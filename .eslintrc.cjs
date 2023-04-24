@@ -25,9 +25,17 @@ module.exports = {
       // It's the setting you need when using TypeScript.
       parserOptions: {
         parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro", ".spec.ts", ".spec", ".ts", ".d.ts"],
+        extraFileExtensions: [
+          ".astro",
+          "tsx",
+          ".spec.ts",
+          ".spec",
+          ".ts",
+          ".d.ts",
+        ],
         // The script of Astro components uses ESM.
         sourceType: "module",
+        ecmaVersion: 2020,
       },
       rules: {
         // Enable recommended rules

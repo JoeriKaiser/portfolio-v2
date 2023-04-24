@@ -35,6 +35,7 @@ module.exports = {
         ],
         // The script of Astro components uses ESM.
         sourceType: "module",
+        ecmaVersion: 2020,
       },
       rules: {
         // Enable recommended rules

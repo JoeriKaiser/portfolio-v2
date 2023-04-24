@@ -1,31 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Welcome from "views/Welcome";
 ---
 
-<>
-  <Layout title="Welcome | Joeri Kaiser">
-    <main>
-      <h1>
-        Welcome to my<span class="text-gradient"> Developer Creations</span>
-      </h1>
-      <p class="instructions">
-        Hello 🙋🏼‍♂️, My name is Joeri Kaiser.<br /> Proficient Front-End and Mobile
-        App Developer with a passion for creating intuitive user interfaces. I can't
-        list all things that I'm familiar with but here are a few :
-        <code>React</code>,
-        <code>Svelte</code>, <code>Astro Build</code>, <code>Typescript</code>, <code
-          >NodeJS</code
-        >, <code>Graphql</code>.
-        <br />
-        I have experience working on projects of all sizes. In my previous role as
-        a Front-End Developer, I participated in the development of web and mobile
-        apps. I thrive in collaborative environments and am always looking for ways
-        to improve my skills and contribute to a project and team.
-      </p>
-      <h2><span class="text-gradient">Notable Creations</span></h2>
-    </main>
+<Layout title="Welcome to Astro.">
+  <main>
+    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
     <ul role="list" class="link-card-grid">
       <Card
         href="https://docs.astro.build/"
@@ -47,9 +32,10 @@ import Welcome from "views/Welcome";
         title="Community"
         body="Come say hi to our amazing Discord community. ❤️"
       />
+      <p>test deployment</p>
     </ul>
-  </Layout>
-</>
+  </main>
+</Layout>
 
 <style>
   main {
@@ -59,11 +45,6 @@ import Welcome from "views/Welcome";
   }
   h1 {
     font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  h2 {
-    font-size: 2.5rem;
     font-weight: 800;
     margin: 0;
   }
@@ -78,12 +59,9 @@ import Welcome from "views/Welcome";
     line-height: 1.6;
     margin: 1rem 0;
     border: 1px solid rgba(var(--accent), 25%);
-    background-color: rgb(var(--neutral-white));
+    background-color: white;
     padding: 1rem;
     border-radius: 0.4rem;
-  }
-  .dark .instructions {
-    background-color: rgba(var(--neutral-dark), 12%);
   }
   .instructions code {
     font-size: 0.875em;

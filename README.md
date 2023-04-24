@@ -1,55 +1,50 @@
-# Astro Starter Kit: Basics
+# Portfolio Joeri Kaiser
 
-```
-npm create astro@latest -- --template basics
-```
+A web application that showcases my work, skills, and projects.
+Currently a work in progress
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Technologies Used :
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Astro Build framework
+- React
+- Typescript
+- Vite
+- Vitest
+- Tailwind
+- Deno
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Features and Functionality :
 
+- Presentation section
+- List of my work and projects
+- Contact section
+- Downloadable Resume
 
-## 🚀 Project Structure
+## Installation Instructions :
 
-Inside of your Astro project, you'll see the following folders and files:
+Clone the project to your local machine.
+Install pnpm package manager :
+`npm install -g pnpm`
+Run : `pnpm install` to install the required packages.
+Run : `pnpm dev` to run the project in development mode.
+Run: ` pnpm build` followed by `pnpm preview` to preview the final web app for production.
+To run tests or linters, use the following commands:
+`pnpm lint`
+`pnpm test`
+`pnpm coverage`
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Known Issues :
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+There are currently no known issues with this project. Please feel free to open an issue on GitHub if you notice any issues.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### License :
 
-Any static assets, like images, can be placed in the `public/` directory.
+This project is not licensed.
 
-## 🧞 Commands
+### Contributions :
 
-All commands are run from the root of the project, from a terminal:
+Unfortunately, contributions to this project are not accepted at this time.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+### More Information :
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To learn more about me and my work, visit my LinkedIn page.

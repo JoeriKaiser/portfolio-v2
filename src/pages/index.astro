@@ -2,6 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Welcome from "views/Welcome";
+import HeroNews from "@components/HeroNews.astro";
+
+import constants from "../constants";
+import Project from "@components/Project";
+import type { Project as ProjectType } from "../types";
 ---
 
 <>
@@ -10,44 +15,53 @@ import Welcome from "views/Welcome";
       <h1>
         Welcome to my<span class="text-gradient"> Developer Creations</span>
       </h1>
-      <p class="instructions">
-        Hello 🙋🏼‍♂️, My name is Joeri Kaiser.<br /> Proficient Front-End and Mobile
-        App Developer with a passion for creating intuitive user interfaces. I can't
-        list all things that I'm familiar with but here are a few :
-        <code>React</code>,
-        <code>Svelte</code>, <code>Astro Build</code>, <code>Typescript</code>, <code
-          >NodeJS</code
-        >, <code>Graphql</code>.
-        <br />
-        I have experience working on projects of all sizes. In my previous role as
-        a Front-End Developer, I participated in the development of web and mobile
-        apps. I thrive in collaborative environments and am always looking for ways
-        to improve my skills and contribute to a project and team.
-      </p>
-      <h2><span class="text-gradient">Notable Creations</span></h2>
+      <HeroNews />
+      <div class="instructions-container card">
+        <p class="instructions">
+          Hello 🙋🏼‍♂️, My name is Joeri Kaiser.<br /> Proficient Front-End and Mobile
+          App Developer with a passion for creating intuitive user interfaces. I
+          can't list all things that I'm familiar with but here are a few :
+          <code>React</code>,
+          <code>Svelte</code>, <code>Astro Build</code>, <code>Typescript</code
+          >, <code>NodeJS</code>, <code>Graphql</code>.
+          <br />
+          I have experience working on projects of all sizes. In my previous role
+          as a Front-End Developer, I participated in the development of web and
+          mobile apps. I thrive in collaborative environments and am always looking
+          for ways to improve my skills and contribute to a project and team.
+        </p>
+      </div>
+      <section>
+        <h2><span class="text-gradient">Notable Creations</span></h2>
+        {
+          constants.projectsData.map((project: ProjectType, index) => (
+            <Project project={project} index={index} />
+          ))
+        }
+      </section>
+      <!-- <ul role="list" class="link-card-grid">
+      <Card
+      href="https://docs.astro.build/"
+      title="Documentation"
+      body="Learn how Astro works and explore the official API docs."
+      />
+      <Card
+      href="https://astro.build/integrations/"
+      title="Integrations"
+      body="Supercharge your project with new frameworks and libraries."
+      />
+      <Card
+      href="https://astro.build/themes/"
+      title="Themes"
+      body="Explore a galaxy of community-built starter themes."
+      />
+      <Card
+      href="https://astro.build/chat/"
+      title="Community"
+      body="Come say hi to our amazing Discord community. ❤️"
+      />
+    </ul> -->
     </main>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
   </Layout>
 </>
 
@@ -55,7 +69,7 @@ import Welcome from "views/Welcome";
   main {
     margin: auto;
     padding: 1.5rem;
-    max-width: 60ch;
+    max-width: 100ch;
   }
   h1 {
     font-size: 3rem;
@@ -74,17 +88,15 @@ import Welcome from "views/Welcome";
     background-size: 400%;
     background-position: 0%;
   }
-  .instructions {
+  .instructions-container {
     line-height: 1.6;
     margin: 1rem 0;
     border: 1px solid rgba(var(--accent), 25%);
-    background-color: rgb(var(--neutral-white));
+    background-color: rgb(var(--neutral-light));
     padding: 1rem;
     border-radius: 0.4rem;
   }
-  .dark .instructions {
-    background-color: rgba(var(--neutral-dark), 12%);
-  }
+
   .instructions code {
     font-size: 0.875em;
     font-weight: bold;

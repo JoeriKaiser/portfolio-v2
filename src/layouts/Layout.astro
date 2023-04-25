@@ -60,8 +60,11 @@ const { title } = Astro.props;
       white 60%
     );
   }
-  .dark {
+  .dark,
+  .dark .card,
+  .dark .link-card > a {
     color: white;
+    background-color: rgb(var(--neutral-dark));
   }
   html {
     font-family: system-ui, sans-serif;
@@ -75,6 +78,7 @@ const { title } = Astro.props;
     height: 100vh;
     position: fixed;
   }
+
   html.dark {
     background-color: RGB(var(--neutral-dark), 0.8);
   }

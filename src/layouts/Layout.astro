@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="relative">
-    <Navbar client:visible />
+    <Navbar client:only />
     <slot />
   </body>
 </html>
@@ -88,7 +88,7 @@ const { title } = Astro.props;
   }
 </style>
 
-<script is:inline>
+<script defer is:inline>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");

@@ -1,3 +1,12 @@
 .nav {
   background-color: rgb(var(--accent-color));
 }
+
+.badge {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.2);
+  border-radius: theme("borderRadius.lg");
+  padding: theme("spacing.2");
+  margin: theme("spacing.1");
+  box-shadow: theme("boxShadow.xl");
+}

@@ -35,7 +35,7 @@ import type { Project as ProjectType } from "../types";
         <h2><span class="text-gradient">Notable Creations</span></h2>
         {
           constants.projectsData.map((project: ProjectType, index) => (
-            <Project project={project} index={index} />
+            <Project client:visible project={project} index={index} />
           ))
         }
       </section>
